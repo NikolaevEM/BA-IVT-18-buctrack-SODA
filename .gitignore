@@ -3,6 +3,16 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+bin
+vs
+obj
+
+Report.NET.8.9.8
+
+*.oob
+*.suo
+*.vs/
+
 # User-specific files
 *.rsuser
 *.suo
