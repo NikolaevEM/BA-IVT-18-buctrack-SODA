@@ -17,20 +17,13 @@ namespace PE1
         {
 
         }
-        // types
         public virtual DbSet<BugType> BugTypes { get; set; }
         public virtual DbSet<Division> Divisions { get; set; }
         public virtual DbSet<PositionEmployee> PositionEmployees { get; set; }
         public virtual DbSet<Procedure> Procedures { get; set; }
         public virtual DbSet<StatusBug> StatusBugs { get; set; }
         public virtual DbSet<StatusEmployee> StatusEmployees { get; set; }
-        // main classes
-        public virtual DbSet<Bug> BugTypes { get; set; }
-        public virtual DbSet<Comment> Comments { get; set; }
-        public virtual DbSet<Employee> Employees { get; set; }
-        public virtual DbSet<Fix> Fixes { get; set; }
-        public virtual DbSet<Log> Logs { get; set; }
-
+        //остальный добавить
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

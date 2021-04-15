@@ -21,6 +21,7 @@ namespace PE1
         public int PositionEmployeeId { get; set; }
         [ForeignKey("PositionEmployeeId")]
         public PositionEmployee PositionEmployee { get; set; }
+
         public int StatusEmployeeId { get; set; }
         [ForeignKey("StatusEmployeeId")]
         public StatusEmployee StatusEmployee { get; set; }

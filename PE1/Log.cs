@@ -10,7 +10,7 @@ using System.ComponentModel;
 namespace PE1
 {
     //обычно делают в отдельной базе (txt)
-    public class Log
+    class Log
     {
         [Key]
         public int LogId { get; set; }
