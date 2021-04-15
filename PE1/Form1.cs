@@ -115,5 +115,12 @@ namespace PE1
                 Properties.Settings.Default.Save();
             }
         }
+
+
+        //timofeeva
+        private void textBoxLogin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

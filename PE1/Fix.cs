@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace PE1
 {
-    public class Fix
+    class Fix
     {
         [Key]
         public int FixId { get; set; }
