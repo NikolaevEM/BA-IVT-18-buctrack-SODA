@@ -19,9 +19,9 @@ namespace PE1
             public string Email { get; set; }
             //public string Address? { get; set; }
             //public Status Status { get; set; }
-            
+
             public ICollection<ChildClass> ChildClasses { get; set; }
-            }
+        }
 
         public class ChildClass
         {

@@ -9,16 +9,16 @@ using System.ComponentModel;
 
 namespace PE1
 {
-    public class Comment
+    class Comment
     {
         [Key]
-        public int Id { get; set; }
+        public int CommentsId { get; set; }
         public DateTime Date { get; set; }
         public string Annotations { get; set; }
-        public int EmployeeId { get; set; }
-        public Employee Employee { get; set; }
+        public string User { get; set; }
 
         public int BugId { get; set; }
+        [ForeignKey("BugId")]
         public Bug Bug { get; set; }
     }
 }

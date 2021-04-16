@@ -79,6 +79,7 @@ namespace PE1
             // 
             resources.ApplyResources(this.textBoxLogin, "textBoxLogin");
             this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.TextChanged += new System.EventHandler(this.textBoxLogin_TextChanged);
             this.textBoxLogin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLogin_KeyPress_1);
             // 
             // labelLogin
