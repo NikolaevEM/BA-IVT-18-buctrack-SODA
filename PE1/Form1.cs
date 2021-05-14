@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -100,12 +101,28 @@ namespace PE1
 
         private void buttonLogin_Click(object sender, EventArgs e)
         {
+            String loginUser = textBoxLogin.Text;
+            //String passUser = textBoxPassword.Text;
+
+            DB db = new DB();
+            DataTable table = new DataTable();
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            SqlCommand command = new SqlCommand("SELECT * FROM Employee WHERE login = @ul", db.getConnection());
+            command.Parameters.Add("@ul", SqlDbType.VarChar).Value = loginUser;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+                MessageBox.Show("Yes");
+            else
+                MessageBox.Show("No");
+
             if (checkBoxRemember.Checked)
             {
-                Properties.Settings.Default["login"] = textBoxLogin.Text;
-                Properties.Settings.Default["password"] = textBoxPassword.Text;
-                Properties.Settings.Default["remember"] = "True";
-                Properties.Settings.Default.Save();
+                //Properties.Settings.Default["login"] = textBoxLogin.Text;
+                //Properties.Settings.Default["password"] = textBoxPassword.Text;
+                //Properties.Settings.Default["remember"] = "True";
+                //Properties.Settings.Default.Save();
             }
             else
             {
@@ -120,7 +137,7 @@ namespace PE1
         //timofeeva
         private void textBoxLogin_TextChanged(object sender, EventArgs e)
         {
-
+           
         }
     }
 }

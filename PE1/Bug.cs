@@ -23,7 +23,7 @@ namespace PE1
         public virtual ICollection<Fix> Fixes { get; set; }
         public virtual ICollection<Comment> Comments { get; set; }
 
-        public int EmplyeeId { get; set; }
+        public int EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
         public Employee Employee { get; set; }
         

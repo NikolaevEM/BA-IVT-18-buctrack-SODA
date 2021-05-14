@@ -19,7 +19,7 @@ namespace PE1
         [ForeignKey("ProcedureId")]
         public Procedure Procedure { get; set; }
 
-        public int EmplyeeId { get; set; }
+        public int? EmployeeId { get; set; }
         [ForeignKey("EmployeeId")]
         public Employee Employee { get; set; }
 

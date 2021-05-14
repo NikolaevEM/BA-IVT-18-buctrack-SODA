@@ -17,7 +17,7 @@ namespace PE1
         public int Rank { get; set; }
         public DateTime Date { get; set; }
 
-        public int BugId { get; set; }
+        public int? BugId { get; set; }
         [ForeignKey("BugId")]
         public Bug Bug { get; set; }
 
