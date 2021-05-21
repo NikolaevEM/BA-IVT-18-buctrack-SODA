@@ -15,16 +15,16 @@ namespace PE1
         public int EmployeeId { get; set; }
         public string Name { get; set; }
         public string Login { get; set; }
-        public int DivisionId { get; set; }
-        public Division Division { get; set; }
+        public int? DivisionId { get; set; }
+        public virtual Division Division { get; set; }
 
-        public int PositionEmployeeId { get; set; }
+        public int? PositionEmployeeId { get; set; }
         [ForeignKey("PositionEmployeeId")]
-        public PositionEmployee PositionEmployee { get; set; }
+        public virtual PositionEmployee PositionEmployee { get; set; }
 
-        public int StatusEmployeeId { get; set; }
+        public int? StatusEmployeeId { get; set; }
         [ForeignKey("StatusEmployeeId")]
-        public StatusEmployee StatusEmployee { get; set; }
+        public virtual StatusEmployee StatusEmployee { get; set; }
 
         public virtual ICollection<Bug> Bugs { get; set; }
         public virtual ICollection<Fix> Fixes { get; set; }

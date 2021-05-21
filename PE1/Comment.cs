@@ -15,10 +15,10 @@ namespace PE1
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public string Annotations { get; set; }
-        public int EmployeeId { get; set; }
-        public Employee Employee { get; set; }
+        public int? EmployeeId { get; set; }
+        public virtual Employee Employee { get; set; }
 
         public int BugId { get; set; }
-        public Bug Bug { get; set; }
+        public virtual Bug Bug { get; set; }
     }
 }
