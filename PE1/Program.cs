@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace PE1
+namespace PE1 //РАБОЧАЯ
 {
     static class Program
     {
@@ -29,8 +29,9 @@ namespace PE1
             //Application.Run(new ChooseFixForm());
             //Application.Run(new AcceptFixForm()); //подтверждение исправления бага //ПРИНЯТЬ РЕШЕНИЕ + ОТКЛОНИТЬ РЕШЕНИЕ
             Application.Run(new RestoreFixForm()); //восстановить решение
-            //Application.Run(new OrderBugfixerGroupEmployeeForm());
-            //Application.Run(new OrderBugfixerEmployeeForm());
+                //Application.Run(new OrderBugfixerGroupEmployeeForm());
+                //Application.Run(new OrderBugfixerEmployeeForm());
+            //Application.Run(new SolutionForm()); 
         }
     }
 }

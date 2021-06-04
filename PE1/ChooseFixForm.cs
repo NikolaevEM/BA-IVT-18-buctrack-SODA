@@ -16,5 +16,10 @@ namespace PE1
         {
             InitializeComponent();
         }
+
+        private void ChooseFixForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

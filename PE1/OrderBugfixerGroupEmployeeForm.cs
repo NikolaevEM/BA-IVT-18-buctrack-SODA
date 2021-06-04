@@ -12,17 +12,39 @@ namespace PE1
 {
     public partial class OrderBugfixerGroupEmployeeForm : Form
     {
+        int a,b;
         public static Context MainContext { get; set; }
 
         public OrderBugfixerGroupEmployeeForm()
         {
             InitializeComponent();
-            MainContext = new Context();
         }
 
         private void OrderBugfixerGroupEmployeeForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = MainContext.PositionEmployees.ToList();
+            
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {//Bug ID
+            b = Convert.ToInt32(comboBox2.SelectedValue);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {//Employee ID
+            a = Convert.ToInt32(comboBox1.SelectedValue);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Context c = new Context();
+            Bug bug = new Bug();
+            Employee emp = new Employee();
+            //f.BugId = Bug.BugId;
+            bug.BugId = b;
+            emp.EmployeeId = a;
+            bug.EmployeeId = emp.EmployeeId;
+            MessageBox.Show("Сделано");
         }
     }
 }

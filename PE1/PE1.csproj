@@ -138,6 +138,12 @@
     <Compile Include="RestoreFixForm.Designer.cs">
       <DependentUpon>RestoreFixForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SolutionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SolutionForm.Designer.cs">
+      <DependentUpon>SolutionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Types\Procedure.cs" />
     <Compile Include="Types\BugType.cs" />
     <Compile Include="Comment.cs" />
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChooseFixForm.resx">
       <DependentUpon>ChooseFixForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.en.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -204,6 +213,9 @@
     </Compile>
     <EmbeddedResource Include="RestoreFixForm.resx">
       <DependentUpon>RestoreFixForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SolutionForm.resx">
+      <DependentUpon>SolutionForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

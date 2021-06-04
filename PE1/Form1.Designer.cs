@@ -118,6 +118,7 @@ namespace PE1
             this.Controls.Add(this.butContact);
             this.Controls.Add(this.buttonLogin);
             this.Name = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -23,7 +23,9 @@ namespace PE1
         public virtual DbSet<Procedure> Procedures { get; set; }
         public virtual DbSet<StatusBug> StatusBugs { get; set; }
         public virtual DbSet<StatusEmployee> StatusEmployees { get; set; }
+        public virtual DbSet<Fix> Fixes { get; set; }
         //остальный добавить
+        public virtual DbSet<Employee> Employees { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

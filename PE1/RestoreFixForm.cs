@@ -12,6 +12,8 @@ namespace PE1
 {
     public partial class RestoreFixForm : Form
     {
+        int selected;
+        public static Bug Bug { get; set; }
         public RestoreFixForm()
         {
             InitializeComponent();
@@ -19,22 +21,27 @@ namespace PE1
 
         private void RestoreFixForm_Load(object sender, EventArgs e)
         {
-            DataTable table = new DataTable();
+        
+        }
 
-            table.Columns.Add("id", typeof(int));
-            table.Columns.Add("BugType", typeof(BugType));
-            table.Columns.Add("Description", typeof(string));
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Restore(selected);
+            Context c = new Context();
+            Fix f = new Fix();
+            f.BugId = Bug.BugId;
+            Bug.StatusBugId = 1;
+            MessageBox.Show("Restored!");
+        }
 
-            table.Rows.Add(1);
-            table.Rows.Add(2);
-            table.Rows.Add(3);
-            table.Rows.Add(4);
-            table.Rows.Add(5);
-            table.Rows.Add(6);
-            table.Rows.Add(7);
-            table.Rows.Add(8);
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selected = Convert.ToInt32(comboBox1.SelectedValue);
+        }
 
-            dataGridView1.DataSource = table;
+        public void Restore(int selected)
+        {
+
         }
     }
 }
